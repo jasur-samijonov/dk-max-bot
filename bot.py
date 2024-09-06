@@ -6,7 +6,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, filters, Callb
 
 # Google Sheets setup
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("telegram-bot\credentials.json", scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
 client = gspread.authorize(creds)
 sheet = client.open_by_key('1DAwKZsTL2d1UwRLhO3pZ9nQK_uYejurG-J72y2MjbCo').sheet1
 
